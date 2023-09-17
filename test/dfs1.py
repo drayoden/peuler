@@ -32,6 +32,7 @@ print(f'graph: {graph}\n')
 
 print(f'len(graph): {len(graph)}\n')
 
+<<<<<<< HEAD:test/dfs.py
 def dfs(s, d, cp, v):
     v[s] = True
     cp.append(s)
@@ -50,10 +51,26 @@ def dfs(s, d, cp, v):
 
 
 def getAllPaths(s, d): 
-    
-    # mark all nodes as not visited
-    visited = [False for _ in range(len(graph))]
+=======
 
+
+# def dfs(g, s, d, p, v):
+#     v[s] = True
+#     p.append(s)
+
+#     if (s == d):
+        
+
+#     pass
+
+
+# def getAllPaths(graph, source, destination): 
+>>>>>>> 6b16d7f5f294d04d78d0f0defa3575417a236ee2:test/dfs1.py
+    
+#     # mark all nodes as not visited
+#     visited = [False for _ in range(len(graph))]
+
+<<<<<<< HEAD:test/dfs.py
     # path lists:
     currentpath = []
     allpaths = []
@@ -64,6 +81,13 @@ def getAllPaths(s, d):
     return allpaths
 
 ap = getAllPaths(source,destination)
+=======
+#     # path list:
+#     path = []
+
+#     # call dfs to get all the paths:
+#     dfs(graph, source, destination, path, visited)
+>>>>>>> 6b16d7f5f294d04d78d0f0defa3575417a236ee2:test/dfs1.py
 
 
 
