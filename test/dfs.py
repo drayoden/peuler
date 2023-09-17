@@ -32,26 +32,38 @@ print(f'graph: {graph}\n')
 
 print(f'len(graph): {len(graph)}\n')
 
-def dfs(g, s, d, p, v):
+def dfs(s, d, cp, v):
     v[s] = True
-    p.append(s)
+    cp.append(s)
 
     if (s == d):
+        print(cp)
+    else:
+        for i in graph[s]:
+            if v[i] == False:
+                dfs(i,d, cp, v)
+    cp.pop()
+    v[s] = False
         
 
-    pass
 
 
-def getAllPaths(graph, source, destination): 
+
+def getAllPaths(s, d): 
     
     # mark all nodes as not visited
     visited = [False for _ in range(len(graph))]
 
-    # path list:
-    path = []
+    # path lists:
+    currentpath = []
+    allpaths = []
 
     # call dfs to get all the paths:
-    dfs(graph, source, destination, path, visited)
+    dfs(s, d, currentpath, visited)
+
+    return allpaths
+
+ap = getAllPaths(source,destination)
 
 
 
